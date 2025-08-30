@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Cántaros - Fábrica de Mezcal | Puerto Escondido, Oaxaca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        .font-playfair { font-family: 'Crimson Text', serif; }
+        .font-inter { font-family: 'Libre Baskerville', serif; }
+        
+        :root {
+            --bamboo-light: #f7f4e9;
+            --bamboo-medium: #ede5d3;
+            --bamboo-dark: #d9c7a3;
+            --bamboo-accent: #c4a574;
+            --bamboo-deep: #a68b5b;
+            --traditional-blue: #023b46;
+            --deep-blue: #012a33;
+            --accent-blue: #034a57;
+            --cream: #fefcf7;
+            --warm-brown: #8b4513;
+            --earth-brown: #6b4423;
+            --oaxaca-terracotta: #d2691e;
+            --soft-white: #faf8f5;
+            --traditional-navy: #023b46;
+            --modern-charcoal: #2d3748;
+            --forest-green: #2f855a;
+            --sage-green: #68d391;
+            --warm-beige: #f7fafc;
+            --soft-cream: #fffef7;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f7f4e9 0%, #ede5d3 50%, #d9c7a3 100%);
+            background-image: 
+                repeating-linear-gradient(90deg, 
+                    #c4a574 0px, 
+                    #c4a574 3px, 
+                    #ede5d3 4px, 
+                    #ede5d3 8px,
+                    #f7f4e9 9px,
+                    #f7f4e9 25px
+                ),
+                repeating-linear-gradient(0deg, 
+                    rgba(196, 165, 116, 0.4) 0px, 
+                    rgba(196, 165, 116, 0.4) 2px, 
+                    transparent 3px, 
+                    transparent 12px
+                ),
+                radial-gradient(circle at 30% 30%, rgba(217, 199, 163, 0.6) 0%, transparent 40%),
+                radial-gradient(circle at 70% 70%, rgba(166, 139, 91, 0.4) 0%, transparent 35%),
+                linear-gradient(45deg, 
+                    #f7f4e9 25%, 
+                    #ede5d3 25%, 
+                    #ede5d3 50%, 
+                    #f7f4e9 50%, 
+                    #f7f4e9 75%,
+                    #ede5d3 75%
+                ),
+                radial-gradient(circle at 90% 10%, rgba(2, 59, 70, 0.08) 0%, transparent 60%);
+            background-size: 35px 35px, 18px 18px, 150px 150px, 100px 100px, 40px 40px, 200px 200px;
+            background-position: 0 0, 12px 12px, 0 0, 75px 75px, 0 0, 0 0;
+            background-attachment: fixed;
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(2, 59, 70, 0.2);
+        }
+        
+        .bamboo-card {
+            transition: all 0.3s ease;
+        }
+        
+        .bamboo-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="font-inter">
+    <!-- Header -->
+    <header class="shadow-lg sticky top-0 z-50" style="background: linear-gradient(135deg, #a68b5b 0%, #023b46 100%); color: white;">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="text-4xl">🏺</div>
+                    <div>
+                        <h1 class="font-playfair text-2xl font-bold text-white">Los Cántaros</h1>
+                        <p class="text-sm text-gray-200">Fábrica de Mezcal Artesanal</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#inicio" class="text-white hover:opacity-80 transition-opacity">Inicio</a>
+                    <a href="#productos" class="text-white hover:opacity-80 transition-opacity">Productos</a>
+                    <a href="#cata" class="text-white hover:opacity-80 transition-opacity">Agendar Cata</a>
+                    <a href="#contacto" class="text-white hover:opacity-80 transition-opacity">Contacto</a>
+                </nav>
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="py-20" style="background: linear-gradient(135deg, #ede5d3 0%, #c4a574 30%, #023b46 70%, #012a33 100%);">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-playfair text-5xl md:text-6xl font-bold mb-6 text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+                    Tradición Oaxaqueña en Cada Gota
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.6);">
+                    Desde Puerto Escondido, Oaxaca, creamos mezcal artesanal con métodos ancestrales y el corazón del agave
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#productos" class="px-8 py-3 rounded-full font-semibold transition-all hover:opacity-90" style="background-color: #f7f4e9; color: #023b46;">
+                        🌟 Ver Productos
+                    </a>
+                    <a href="#cata" class="px-8 py-3 rounded-full font-semibold transition-all hover:opacity-90 border-2 border-white text-white bg-transparent" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                        🥃 Agendar Cata
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="font-playfair text-4xl font-bold mb-6" style="color: #023b46;">
+                        ⭐ Nuestra Historia
+                    </h3>
+                    <p class="text-lg mb-6" style="color: #023b46;">
+                        En Los Cántaros, honramos la tradición mezcalera oaxaqueña que se ha transmitido de generación en generación. Ubicados en Puerto Escondido, Oaxaca, utilizamos agaves silvestres y métodos ancestrales para crear mezcales únicos.
+                    </p>
+                    <p class="text-lg" style="color: #023b46;">
+                        Cada botella cuenta la historia de nuestra tierra, el trabajo de nuestros maestros mezcaleros y la pasión por preservar esta bebida sagrada de nuestros antepasados.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="text-8xl mb-4">🌵</div>
+                    <p class="font-semibold" style="color: #023b46;">✨ Agave Silvestre de Oaxaca</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" class="py-16" style="background: linear-gradient(135deg, #f7f4e9 0%, #ede5d3 50%, #faf8f5 100%);">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="font-playfair text-4xl font-bold mb-4" style="color: #023b46;">
+                    🍶 Nuestros Mezcales
+                </h3>
+                <p class="text-lg max-w-2xl mx-auto" style="color: #023b46;">
+                    Cada mezcal es una obra de arte líquida, destilada con amor y respeto por la tradición
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card rounded-2xl p-6 text-center shadow-lg bg-white" style="border: 2px solid #023b46;">
+                    <div class="text-6xl mb-4">🍶</div>
+                    <h4 class="font-playfair text-2xl font-bold mb-3" style="color: #023b46;">Mezcal Espadín</h4>
+                    <p class="mb-4" style="color: #023b46;">
+                        Nuestro clásico mezcal de agave espadín. Suave, equilibrado y perfecto para iniciarse en el mundo del mezcal.
+                    </p>
+                    <div class="font-semibold text-lg mb-6" style="color: #023b46;">⚡ 48% Alc. Vol.</div>
+                    <button class="px-6 py-2 rounded-full transition-all hover:opacity-90 text-white" style="background-color: #023b46;">
+                        ℹ️ Más Información
+                    </button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card rounded-2xl p-6 text-center shadow-lg bg-white" style="border: 2px solid #023b46;">
+                    <div class="text-6xl mb-4">🏺</div>
+                    <h4 class="font-playfair text-2xl font-bold mb-3" style="color: #023b46;">Mezcal Tobalá</h4>
+                    <p class="mb-4" style="color: #023b46;">
+                        Mezcal premium de agave tobalá silvestre. Complejo, aromático y de producción limitada.
+                    </p>
+                    <div class="font-semibold text-lg mb-6" style="color: #023b46;">⚡ 48% Alc. Vol.</div>
+                    <button class="px-6 py-2 rounded-full transition-all hover:opacity-90 text-white" style="background-color: #023b46;">
+                        ℹ️ Más Información
+                    </button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card rounded-2xl p-6 text-center shadow-lg bg-white" style="border: 2px solid #023b46;">
+                    <div class="text-6xl mb-4">🌟</div>
+                    <h4 class="font-playfair text-2xl font-bold mb-3" style="color: #023b46;">Mezcal Ensamble</h4>
+                    <p class="mb-4" style="color: #023b46;">
+                        Blend único de agaves espadín y cuishe. Una experiencia sensorial incomparable.
+                    </p>
+                    <div class="font-semibold text-lg mb-6" style="color: #023b46;">⚡ 48% Alc. Vol.</div>
+                    <button class="px-6 py-2 rounded-full transition-all hover:opacity-90 text-white" style="background-color: #023b46;">
+                        ℹ️ Más Información
+                    </button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card rounded-2xl p-6 text-center shadow-lg bg-white" style="border: 2px solid #023b46;">
+                    <div class="text-6xl mb-4">🌿</div>
+                    <h4 class="font-playfair text-2xl font-bold mb-3" style="color: #023b46;">Mezcal Cuishe</h4>
+                    <p class="mb-4" style="color: #023b46;">
+                        Agave cuishe de crecimiento lento. Notas herbales intensas y carácter único de la región.
+                    </p>
+                    <div class="font-semibold text-lg mb-6" style="color: #023b46;">⚡ 48% Alc. Vol.</div>
+                    <button class="px-6 py-2 rounded-full transition-all hover:opacity-90 text-white" style="background-color: #023b46;">
+                        ℹ️ Más Información
+                    </button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card rounded-2xl p-6 text-center shadow-lg bg-white" style="border: 2px solid #023b46;">
+                    <div class="text-6xl mb-4">🔥</div>
+                    <h4 class="font-playfair text-2xl font-bold mb-3" style="color: #023b46;">Mezcal Arroqueño</h4>
+                    <p class="mb-4" style="color: #023b46;">
+                        Agave arroqueño de gran tamaño. Sabor robusto y complejo, ideal para conocedores.
+                    </p>
+                    <div class="font-semibold text-lg mb-6" style="color: #023b46;">⚡ 48% Alc. Vol.</div>
+                    <button class="px-6 py-2 rounded-full transition-all hover:opacity-90 text-white" style="background-color: #023b46;">
+                        ℹ️ Más Información
+                    </button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card rounded-2xl p-6 text-center shadow-lg bg-white" style="border: 2px solid #023b46;">
+                    <div class="text-6xl mb-4">🌙</div>
+                    <h4 class="font-playfair text-2xl font-bold mb-3" style="color: #023b46;">Mezcal Tepextate</h4>
+                    <p class="mb-4" style="color: #023b46;">
+                        Agave tepextate de 25 años de maduración. Exclusivo y de sabor mineral excepcional.
+                    </p>
+                    <div class="font-semibold text-lg mb-6" style="color: #023b46;">⚡ 48% Alc. Vol.</div>
+                    <button class="px-6 py-2 rounded-full transition-all hover:opacity-90 text-white" style="background-color: #023b46;">
+                        ℹ️ Más Información
+                    </button>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card rounded-2xl p-6 text-center shadow-lg bg-white" style="border: 2px solid #023b46;">
+                    <div class="text-6xl mb-4">🍯</div>
+                    <h4 class="font-playfair text-2xl font-bold mb-3" style="color: #023b46;">Mezcal con Gusano</h4>
+                    <p class="mb-4" style="color: #023b46;">
+                        Tradicional mezcal espadín con gusano de maguey. Auténtica experiencia oaxaqueña.
+                    </p>
+                    <div class="font-semibold text-lg mb-6" style="color: #023b46;">⚡ 48% Alc. Vol.</div>
+                    <button class="px-6 py-2 rounded-full transition-all hover:opacity-90 text-white" style="background-color: #023b46;">
+                        ℹ️ Más Información
+                    </button>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card rounded-2xl p-6 text-center shadow-lg bg-white" style="border: 2px solid #023b46;">
+                    <div class="text-6xl mb-4">🌺</div>
+                    <h4 class="font-playfair text-2xl font-bold mb-3" style="color: #023b46;">Mezcal de Pechuga</h4>
+                    <p class="mb-4" style="color: #023b46;">
+                        Destilado ceremonial con pechuga de guajolote y frutas. Tradición ancestral en cada sorbo.
+                    </p>
+                    <div class="font-semibold text-lg mb-6" style="color: #023b46;">⚡ 48% Alc. Vol.</div>
+                    <button class="px-6 py-2 rounded-full transition-all hover:opacity-90 text-white" style="background-color: #023b46;">
+                        ℹ️ Más Información
+                    </button>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card rounded-2xl p-6 text-center shadow-lg bg-white" style="border: 2px solid #023b46;">
+                    <div class="text-6xl mb-4">👑</div>
+                    <h4 class="font-playfair text-2xl font-bold mb-3" style="color: #023b46;">Mezcal Madrecuishe</h4>
+                    <p class="mb-4" style="color: #023b46;">
+                        Agave madrecuishe de gran porte. Sabor intenso y persistente, para paladares exigentes.
+                    </p>
+                    <div class="font-semibold text-lg mb-6" style="color: #023b46;">⚡ 48% Alc. Vol.</div>
+                    <button class="px-6 py-2 rounded-full transition-all hover:opacity-90 text-white" style="background-color: #023b46;">
+                        ℹ️ Más Información
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasting Section -->
+    <section id="cata" class="py-16" style="background: linear-gradient(135deg, #c4a574 0%, #a68b5b 30%, #023b46 70%, #012a33 100%); color: #faf8f5;">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="font-playfair text-4xl font-bold mb-4 text-white">
+                        🥃 Agenda tu Cata de Mezcal
+                    </h3>
+                    <p class="text-lg text-gray-200">
+                        Vive una experiencia única conociendo nuestro proceso artesanal y degustando nuestros mejores mezcales
+                    </p>
+                </div>
+
+                <!-- Tipos de Cata -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <!-- Cata Básica -->
+                    <div class="bamboo-card rounded-2xl p-6 text-center bg-white" style="border: 2px solid #023b46;">
+                        <div class="text-4xl mb-3">🌱</div>
+                        <h4 class="font-playfair text-xl font-bold mb-3" style="color: #023b46;">Cata Básica</h4>
+                        <div class="text-2xl font-bold mb-3" style="color: #023b46;">$250 MXN</div>
+                        <ul class="text-sm space-y-1" style="color: #023b46;">
+                            <li>• 3 mezcales a elegir</li>
+                            <li>• Recorrido básico</li>
+                            <li>• 1 hora</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cata Tradicional -->
+                    <div class="bamboo-card rounded-2xl p-6 text-center bg-white" style="border: 2px solid #023b46;">
+                        <div class="text-4xl mb-3">🏺</div>
+                        <h4 class="font-playfair text-xl font-bold mb-3" style="color: #023b46;">Cata Tradicional</h4>
+                        <div class="text-2xl font-bold mb-3" style="color: #023b46;">$450 MXN</div>
+                        <ul class="text-sm space-y-1" style="color: #023b46;">
+                            <li>• 5 mezcales a elegir</li>
+                            <li>• Recorrido completo</li>
+                            <li>• Maridaje</li>
+                            <li>• 2 horas</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cata Premium -->
+                    <div class="bamboo-card rounded-2xl p-6 text-center bg-white" style="border: 2px solid #023b46;">
+                        <div class="text-4xl mb-3">⭐</div>
+                        <h4 class="font-playfair text-xl font-bold mb-3" style="color: #023b46;">Cata Premium</h4>
+                        <div class="text-2xl font-bold mb-3" style="color: #023b46;">$750 MXN</div>
+                        <ul class="text-sm space-y-1" style="color: #023b46;">
+                            <li>• 8 mezcales a elegir</li>
+                            <li>• Charla con maestro</li>
+                            <li>• Botella 200ml</li>
+                            <li>• 2.5 horas</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cata Maestro -->
+                    <div class="bamboo-card rounded-2xl p-6 text-center bg-white" style="border: 2px solid #023b46;">
+                        <div class="text-4xl mb-3">👑</div>
+                        <h4 class="font-playfair text-xl font-bold mb-3" style="color: #023b46;">Cata Maestro</h4>
+                        <div class="text-2xl font-bold mb-3" style="color: #023b46;">$1,200 MXN</div>
+                        <ul class="text-sm space-y-1" style="color: #023b46;">
+                            <li>• 10 mezcales a elegir</li>
+                            <li>• Experiencia VIP</li>
+                            <li>• Botella 750ml</li>
+                            <li>• 3 horas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <h4 class="font-playfair text-2xl font-bold mb-6 text-white">✨ Experiencias Incluidas</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="text-xl text-gray-300">🏭</div>
+                                <div>
+                                    <h5 class="font-semibold text-white">Recorrido por la fábrica</h5>
+                                    <p class="text-gray-300">Conoce nuestro proceso de producción artesanal</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="text-xl text-gray-300">🥃</div>
+                                <div>
+                                    <h5 class="font-semibold text-white">Degustación guiada</h5>
+                                    <p class="text-gray-300">Prueba nuestra selección con maridaje tradicional</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="text-xl text-gray-300">👨‍🏫</div>
+                                <div>
+                                    <h5 class="font-semibold text-white">Charla con el maestro mezcalero</h5>
+                                    <p class="text-gray-300">Aprende sobre la tradición y técnicas ancestrales</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="text-xl text-gray-300">🎁</div>
+                                <div>
+                                    <h5 class="font-semibold text-white">Regalos especiales</h5>
+                                    <p class="text-gray-300">Llévate recuerdos únicos según tu experiencia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bamboo-card rounded-2xl p-6" style="background-color: #f7f4e9;">
+                        <h4 class="font-playfair text-2xl font-bold mb-6" style="color: #023b46;">📝 Reserva tu Cata</h4>
+                        <form id="cataForm" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2" style="color: #6b4423;">Tipo de Cata</label>
+                                <select id="tipoCata" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:border-transparent" style="border-color: #d9c7a3; background-color: #fefcf7; color: #023b46;">
+                                    <option value="">Seleccionar tipo de cata</option>
+                                    <option value="basica" data-precio="250">🌱 Cata Básica - $250 MXN</option>
+                                    <option value="tradicional" data-precio="450">🏺 Cata Tradicional - $450 MXN</option>
+                                    <option value="premium" data-precio="750">⭐ Cata Premium - $750 MXN</option>
+                                    <option value="maestro" data-precio="1200">👑 Cata Maestro - $1,200 MXN</option>
+                                </select>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold mb-2" style="color: #6b4423;">Nombre completo</label>
+                                    <input type="text" id="nombre" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:border-transparent" style="border-color: #d9c7a3; background-color: #fefcf7; color: #023b46;">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold mb-2" style="color: #6b4423;">Teléfono</label>
+                                    <input type="tel" id="telefono" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:border-transparent" style="border-color: #d9c7a3; background-color: #fefcf7; color: #023b46;">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2" style="color: #6b4423;">Email</label>
+                                <input type="email" id="email" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:border-transparent" style="border-color: #d9c7a3; background-color: #fefcf7; color: #023b46;">
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold mb-2" style="color: #6b4423;">Fecha preferida</label>
+                                    <input type="date" id="fecha" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:border-transparent" style="border-color: #d9c7a3; background-color: #fefcf7; color: #023b46;">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold mb-2" style="color: #6b4423;">Número de personas</label>
+                                    <select id="personas" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:border-transparent" style="border-color: #d9c7a3; background-color: #fefcf7; color: #023b46;">
+                                        <option value="">Seleccionar</option>
+                                        <option value="2">2 personas</option>
+                                        <option value="3">3 personas</option>
+                                        <option value="4">4 personas</option>
+                                        <option value="5">5 personas</option>
+                                        <option value="6">6 personas</option>
+                                        <option value="7">7 personas</option>
+                                        <option value="8">8 personas</option>
+                                        <option value="9">9 personas</option>
+                                        <option value="10">10 personas</option>
+                                        <option value="11">11 personas</option>
+                                        <option value="12">12 personas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2" style="color: #6b4423;">Comentarios adicionales</label>
+                                <textarea id="comentarios" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:border-transparent" style="border-color: #d9c7a3; background-color: #fefcf7; color: #023b46;" placeholder="Ocasión especial, restricciones alimentarias, etc."></textarea>
+                            </div>
+                            <button type="submit" class="w-full font-semibold py-3 rounded-lg transition-all hover:opacity-90 text-white" style="background-color: #8b4513;">
+                                🚀 Enviar Solicitud de Reserva
+                            </button>
+                        </form>
+                        <div id="confirmacion" class="hidden mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                            <h5 class="font-semibold">¡Solicitud enviada!</h5>
+                            <p class="text-sm">Te contactaremos en las próximas 24 horas para confirmar tu reserva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16" style="background: linear-gradient(135deg, #f7f4e9 0%, #faf8f5 100%);">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="font-playfair text-4xl font-bold mb-4" style="color: #d2691e;">
+                    📍 Visítanos
+                </h3>
+                <p class="text-lg" style="color: #2d3748;">
+                    Te esperamos en Puerto Escondido, Oaxaca
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bamboo-card p-6 rounded-2xl bg-white" style="border: 2px solid #d2691e;">
+                    <div class="text-4xl mb-4">📍</div>
+                    <h4 class="font-semibold text-lg mb-2" style="color: #d2691e;">Ubicación</h4>
+                    <p style="color: #2d3748;">
+                        Carretera costera Km 148<br>
+                        70938 Barra de Navidad<br>
+                        Oaxaca, México
+                    </p>
+                </div>
+                <div class="bamboo-card p-6 rounded-2xl bg-white" style="border: 2px solid #d2691e;">
+                    <div class="text-4xl mb-4">📞</div>
+                    <h4 class="font-semibold text-lg mb-2" style="color: #d2691e;">Contacto</h4>
+                    <p style="color: #2d3748;">
+                        Tel: +52 951 216 61 35<br>
+                        WhatsApp: +52 951 160 8636<br>
+                        info@loscantaros.mx
+                    </p>
+                </div>
+                <div class="bamboo-card p-6 rounded-2xl bg-white" style="border: 2px solid #d2691e;">
+                    <div class="text-4xl mb-4">🕒</div>
+                    <h4 class="font-semibold text-lg mb-2" style="color: #d2691e;">Horarios</h4>
+                    <p style="color: #2d3748;">
+                        Lunes a Domingo<br>
+                        8:00 AM - 8:00 PM<br>
+                        Todos los días del año
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8" style="background: linear-gradient(135deg, #a68b5b 0%, #023b46 100%); color: white;">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="text-3xl">🏺</div>
+                    <div>
+                        <h5 class="font-playfair text-xl font-bold text-white">Los Cántaros</h5>
+                        <p class="text-sm" style="color: #d2691e;">✨ Mezcal Artesanal de Oaxaca</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-sm text-gray-300">
+                        © 2024 Los Cántaros. Todos los derechos reservados.<br>
+                        🔞 Consume responsablemente. Prohibida la venta a menores de edad.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Set minimum date to today
+        const fechaInput = document.getElementById('fecha');
+        const today = new Date().toISOString().split('T')[0];
+        fechaInput.min = today;
+
+        // Form submission
+        document.getElementById('cataForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const tipoCataSelect = document.getElementById('tipoCata');
+            const selectedOption = tipoCataSelect.options[tipoCataSelect.selectedIndex];
+            const costoPorPersona = parseInt(selectedOption.getAttribute('data-precio'));
+            const tipoCataNombre = selectedOption.textContent;
+            
+            const formData = {
+                tipoCata: tipoCataNombre,
+                nombre: document.getElementById('nombre').value,
+                telefono: document.getElementById('telefono').value,
+                email: document.getElementById('email').value,
+                fecha: document.getElementById('fecha').value,
+                personas: document.getElementById('personas').value,
+                comentarios: document.getElementById('comentarios').value
+            };
+
+            // Calculate total cost
+            const total = costoPorPersona * parseInt(formData.personas);
+
+            // Show confirmation
+            const confirmacion = document.getElementById('confirmacion');
+            confirmacion.innerHTML = `
+                <h5 class="font-semibold text-green-800">¡Solicitud enviada exitosamente! 🎉</h5>
+                <div class="mt-2 text-sm text-green-700">
+                    <p><strong>📋 Resumen de tu reserva:</strong></p>
+                    <p>👤 Nombre: ${formData.nombre}</p>
+                    <p>🥃 Tipo de cata: ${formData.tipoCata}</p>
+                    <p>📅 Fecha: ${new Date(formData.fecha).toLocaleDateString('es-MX')}</p>
+                    <p>👥 Personas: ${formData.personas}</p>
+                    <p>💰 Total estimado: $${total.toLocaleString()} MXN</p>
+                    <p class="mt-2 font-semibold">📞 Te contactaremos en las próximas 24 horas para confirmar disponibilidad y detalles de pago.</p>
+                </div>
+            `;
+            confirmacion.classList.remove('hidden');
+
+            // Reset form
+            this.reset();
+
+            // Scroll to confirmation
+            confirmacion.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Product buttons functionality
+        document.querySelectorAll('.product-card button').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.closest('.product-card').querySelector('h4').textContent;
+                alert(`Más información sobre ${productName}:\n\nEste mezcal está disponible para compra directa en nuestra fábrica o puedes incluirlo en tu experiencia de cata.\n\n¡Contáctanos para más detalles!`);
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976ffb47e6dcf863',t:'MTc1NjUxMTc1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
